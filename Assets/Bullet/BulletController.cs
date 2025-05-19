@@ -14,17 +14,18 @@ public class BulletController : MonoBehaviour
     public void Initialise()
     {
         // Get the mouse position in the world space
-        mousePosition.z = 0f;
+        mousePosition.z = 0.0f;
 
         // Calculate the direction from the current position to the mouse position
         Vector3 direction = (mousePosition - transform.position).normalized;
 
         // Move the bullet towards the mouse position
-        GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        GetComponent<Rigidbody2D>().linearVelocity = direction * bulletSpeed;
 
         // Rotate the bullet so it is orneted to the mouse pointer
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
 
         lifetime = 3.0f;
     }

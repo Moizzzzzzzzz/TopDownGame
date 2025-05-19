@@ -398,8 +398,8 @@ GameObject:
   - component: {fileID: 1309950425}
   - component: {fileID: 1309950424}
   - component: {fileID: 1309950428}
-  - component: {fileID: 1309950429}
   - component: {fileID: 1309950430}
+  - component: {fileID: 1309950429}
   m_Layer: 0
   m_Name: PlayerSquare
   m_TagString: Untagged
@@ -576,12 +576,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1309950423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966fbc0eaf834b7459e84502cc1d8646, type: 3}
+  m_Script: {fileID: 11500000, guid: 7862d65c801d43b49802d5f507f60f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  bulletForce: 20
+  bullet: {fileID: -234464226092190271, guid: b15586c99364f104d8782692084d74be, type: 3}
 --- !u!1 &1800766914
 GameObject:
   m_ObjectHideFlags: 0
