@@ -1,8 +1,10 @@
 using UnityEngine;
 
 
+
 public class TopDownController : MonoBehaviour
 {
+
 
     public Rigidbody2D body;
 
@@ -18,10 +20,10 @@ public class TopDownController : MonoBehaviour
 
     protected void LookAt(Vector3 target)
     {
-        //calculate angle between transform and target
+        // calculate angle between transform and target
         float lookAngle = AngleBetweenTwoPoints(transform.position, target) + 90;
 
-        //assign the target roation on the z axis
+        // assign the target rotation on the z axis
         transform.eulerAngles = new Vector3(0, 0, lookAngle);
     }
     private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
@@ -30,20 +32,14 @@ public class TopDownController : MonoBehaviour
     }
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     [System.Obsolete]
     void Update()
     {
-        //get direction of input
+        // get direction of input
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
-        //set walk based on direction
+        // set walk based on direction
         body.velocity = direction * walkspeed;
 
     }
